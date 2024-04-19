@@ -2,8 +2,8 @@
 const { default: axios } = require('axios');
 const express = require('express');
 const baseUrl = process.env.BASE_URL || 'http://localhost';
-const b1 = process.env.B1PORT || 5000;
-const b2 = process.env.B2PORT  || 5001;
+const b1 = process.env.PORT_3 || 50003;
+const b2 = process.env.PORT_1  || 5001;
 
 
 // Create an Express application
@@ -44,7 +44,7 @@ app.get('/incrementNumber/:value', async (req, res) => {
 
 
 // Start the server
-const PORT = process.env.PORT || 5002;
+const PORT = process.env.PORT_2 || 5002;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
